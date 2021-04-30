@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045DF5F0263C67C40099052D /* IOS_Final_COBSCComp192p-053.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS_Final_COBSCComp192p-053.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		045DF5F0263C67C40099052D /* Café-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Café-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		045DF5F3263C67C40099052D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045DF5F5263C67C40099052D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		045DF5F7263C67C40099052D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		045DF5F1263C67C40099052D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				045DF5F0263C67C40099052D /* IOS_Final_COBSCComp192p-053.app */,
+				045DF5F0263C67C40099052D /* Café-Manager.app */,
 				045DF609263C67D30099052D /* IOS_Final_COBSCComp192p-053Tests.xctest */,
 				045DF614263C67D40099052D /* IOS_Final_COBSCComp192p-053UITests.xctest */,
 			);
@@ -101,12 +101,9 @@
 		045DF5F2263C67C40099052D /* IOS_Final_COBSCComp192p-053 */ = {
 			isa = PBXGroup;
 			children = (
-				045DF5F3263C67C40099052D /* AppDelegate.swift */,
-				045DF5F5263C67C40099052D /* SceneDelegate.swift */,
-				045DF5F7263C67C40099052D /* ViewController.swift */,
-				045DF5F9263C67C40099052D /* Main.storyboard */,
-				045DF5FF263C67D20099052D /* Assets.xcassets */,
-				045DF601263C67D20099052D /* LaunchScreen.storyboard */,
+				045DF629263C68A30099052D /* Model */,
+				045DF627263C68540099052D /* View */,
+				045DF626263C682E0099052D /* Controller */,
 				045DF604263C67D20099052D /* Info.plist */,
 				045DF5FC263C67C40099052D /* IOS_Final_COBSCComp192p_053.xcdatamodeld */,
 			);
@@ -131,6 +128,33 @@
 			path = "IOS_Final_COBSCComp192p-053UITests";
 			sourceTree = "<group>";
 		};
+		045DF626263C682E0099052D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				045DF5F5263C67C40099052D /* SceneDelegate.swift */,
+				045DF5F3263C67C40099052D /* AppDelegate.swift */,
+				045DF5F7263C67C40099052D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		045DF627263C68540099052D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045DF5F9263C67C40099052D /* Main.storyboard */,
+				045DF5FF263C67D20099052D /* Assets.xcassets */,
+				045DF601263C67D20099052D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		045DF629263C68A30099052D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +172,7 @@
 			);
 			name = "IOS_Final_COBSCComp192p-053";
 			productName = "IOS_Final_COBSCComp192p-053";
-			productReference = 045DF5F0263C67C40099052D /* IOS_Final_COBSCComp192p-053.app */;
+			productReference = 045DF5F0263C67C40099052D /* Café-Manager.app */;
 			productType = "com.apple.product-type.application";
 		};
 		045DF608263C67D30099052D /* IOS_Final_COBSCComp192p-053Tests */ = {
@@ -446,7 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.upekshaD.IOS-Final-COBSCComp192p-053";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Café-Manager";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.upekshaD.IOS-Final-COBSCComp192p-053";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Café-Manager";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
