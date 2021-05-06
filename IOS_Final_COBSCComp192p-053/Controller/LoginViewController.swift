@@ -13,15 +13,14 @@ import SPAlert
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
     
-
+    @IBOutlet weak var txtPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        
+        print("Login btn Click")
     }
     
     
@@ -106,7 +105,7 @@ class LoginViewController: UIViewController {
     //                self.performSegue(withIdentifier: "RegisterCafeNIBM", sender: nil)
 
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(identifier: "RegisterCafeNIBM" )
+                    let vc = storyboard.instantiateViewController(identifier: "Home" )
                            vc.modalPresentationStyle = .overFullScreen
                     self.present(vc, animated: true)
               }
