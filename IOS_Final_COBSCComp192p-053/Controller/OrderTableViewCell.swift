@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 class OrderTableViewCell: UITableViewCell {
     var ref = Database.database().reference()
-    var count = 0;
-    var status = "";
     @IBOutlet weak var lblCustomerName: UILabel!
     @IBOutlet weak var lblOrderID: UILabel!
     
@@ -22,27 +20,12 @@ class OrderTableViewCell: UITableViewCell {
         // Initialization code
     }
     @IBAction func ClickAccept(_ sender: UIButton) {
-        if(count == 0)
-        {
-            self.ref.child("Orders/\(sender.tag)/status").setValue("PREPARATION")
-            UserDefaults.standard.set("PREPARATION", forKey: "Status")
-            count = count + 1;
-        }
-        else if(count == 1)
-        {
-            self.ref.child("Orders/\(sender.tag)/status").setValue("READY")
+            self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("READY")
             UserDefaults.standard.set("READY", forKey: "Status")
-            count = count + 1;
-        }
-        else if("ARRIVING" == UserDefaults.standard.string(forKey: "Status"))
-        {
-            self.ref.child("Orders/\(sender.tag)/status").setValue("DONE")
-            UserDefaults.standard.set("DONE", forKey: "Status")
-        }
     }
     
     @IBAction func ClickReject(_ sender: UIButton) {
-        self.ref.child("Orders/\(sender.tag)/status").setValue("CANCLE")
+        self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("CANCLE")
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

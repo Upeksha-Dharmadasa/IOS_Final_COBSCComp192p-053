@@ -29,6 +29,7 @@ public struct ReadyOrder: Codable {
         case Ostatus
     }
 }
+
 import UIKit
 import Firebase
 class OrderViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
@@ -39,7 +40,9 @@ class OrderViewController: UIViewController,UITableViewDelegate, UITableViewData
     var readyOrders = [ReadyOrder]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ViewOrder.delegate = self;
+        ViewOrder.dataSource = self;
+        getOrderDetails();
         // Do any additional setup after loading the view.
     }
     func numberOfSections(in tableView: UITableView) -> Int {
