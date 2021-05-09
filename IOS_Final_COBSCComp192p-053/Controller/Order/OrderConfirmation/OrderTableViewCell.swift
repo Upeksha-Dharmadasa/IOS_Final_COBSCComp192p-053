@@ -23,8 +23,9 @@ class OrderTableViewCell: UITableViewCell {
     }
     
     @IBAction func ClickAccept(_ sender: UIButton) {
-            self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("Confirmed")
-            UserDefaults.standard.set("Confirmed", forKey: "Status")
+            self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("Ready")
+        
+            UserDefaults.standard.set("Ready", forKey: "Status")
     }
     
     @IBAction func ClickReject(_ sender: UIButton) {
