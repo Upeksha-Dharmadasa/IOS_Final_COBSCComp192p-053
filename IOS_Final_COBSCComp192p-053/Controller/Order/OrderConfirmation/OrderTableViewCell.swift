@@ -9,19 +9,22 @@
 import UIKit
 import Firebase
 class OrderTableViewCell: UITableViewCell {
+    
     var ref = Database.database().reference()
     @IBOutlet weak var lblCustomerName: UILabel!
     @IBOutlet weak var lblOrderID: UILabel!
     
     @IBOutlet weak var btnAccept: UIButton!
     @IBOutlet weak var btnReject: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
     @IBAction func ClickAccept(_ sender: UIButton) {
-            self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("READY")
-            UserDefaults.standard.set("READY", forKey: "Status")
+            self.ref.child("OrderMaster/\(sender.tag)/Ostatus").setValue("Confirmed")
+            UserDefaults.standard.set("Confirmed", forKey: "Status")
     }
     
     @IBAction func ClickReject(_ sender: UIButton) {
@@ -30,7 +33,6 @@ class OrderTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

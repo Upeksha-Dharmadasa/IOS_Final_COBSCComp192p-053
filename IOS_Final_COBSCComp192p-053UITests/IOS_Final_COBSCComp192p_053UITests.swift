@@ -8,8 +8,36 @@
 
 import XCTest
 
-class IOS_Final_COBSCComp192p_053UITests: XCTestCase {
+//private extension XCUIApplication{
+//
+//    var txtEmail: XCUIElement{self.textFields["txtEmail"]}
+//    var txtPassword: XCUIElement{self.secureTextFields["txtPassword"]}
+//    var btnLogin: XCUIElement{self.buttons["btnLogin"]}
+//    var segmentPreview: XCUIElement{self.segmentedControls["Preview"]}
+//
+//   }
+//
+//class LoginTest: XCTestCase{
+//    private var result: XCTestExpectation!
+//    var userFound = false
+//
+//    func testLogin(){
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        app.txtEmail.tap()
+//        app.txtEmail.typeText("upekshad123@gmail.com")
+//        app.txtPassword.tap()
+//        app.txtPassword.typeText("Shadow123")
+//
+//        app.btnLogin.tap()
+//
+//    }
+//}
 
+
+class IOS_Final_COBSCComp192p_053UITests: XCTestCase {
+   
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

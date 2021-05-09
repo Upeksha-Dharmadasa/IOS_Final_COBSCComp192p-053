@@ -18,12 +18,30 @@ class IOS_Final_COBSCComp192p_053Tests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func TestLoginValdation() throws {
+        
+        //Testing a valid Email
+        XCTAssertTrue(InputFieldValidator.isValidEmail("upekshad123@gmail.com"))
+        
+        //Testing a invalid Email
+        XCTAssertFalse(InputFieldValidator.isValidEmail("idu@_gmail.com"))
+        
+        //Testing a invalid Email
+        XCTAssertFalse(InputFieldValidator.isValidEmail("idu@_gmail.123"))
+        
+        //Testing a valid password
+        XCTAssertTrue(InputFieldValidator.isValidPassword(pass: "Shadow123", minLength: 6, maxLength: 20))
+        
+        //Testing a invalid password
+        XCTAssertTrue(InputFieldValidator.isValidPassword(pass: "abc", minLength: 6, maxLength: 20))
+        
+        //Testing a invalid password
+        XCTAssertTrue(InputFieldValidator.isValidPassword(pass: "ancfnvfnvifnvejr568783t0853tvfjnvfjsnv@fvff48", minLength: 6, maxLength: 20))
+        
     }
-
+    
+     
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
@@ -32,3 +50,4 @@ class IOS_Final_COBSCComp192p_053Tests: XCTestCase {
     }
 
 }
+

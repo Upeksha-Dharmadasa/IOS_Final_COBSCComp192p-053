@@ -27,6 +27,11 @@
 		8A041ADA26447573006444C9 /* PreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A041AD926447573006444C9 /* PreviewTableViewCell.swift */; };
 		8A041ADF26447580006444C9 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A041ADE26447580006444C9 /* CategoryTableViewCell.swift */; };
 		8A041AE4264483F2006444C9 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A041AE3264483F2006444C9 /* AddFoodViewController.swift */; };
+		8A2DF6A326473578001E5829 /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DF6A226473578001E5829 /* OrderDetailTableViewCell.swift */; };
+		8A2DF6C3264765C4001E5829 /* OrderNEWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DF6C2264765C4001E5829 /* OrderNEWViewController.swift */; };
+		8A2DF6C826476F6E001E5829 /* OrderStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DF6C726476F6E001E5829 /* OrderStatusViewController.swift */; };
+		8A2DF6CD26476F93001E5829 /* OrderStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DF6CC26476F93001E5829 /* OrderStatusTableViewCell.swift */; };
+		8A2DF6ED264782FD001E5829 /* LoginUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2DF6EC264782FD001E5829 /* LoginUITest.swift */; };
 		8A4949FE2646B05F004BBF53 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4949FD2646B05F004BBF53 /* OrderViewController.swift */; };
 		8A494A032646B071004BBF53 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A494A022646B071004BBF53 /* OrderTableViewCell.swift */; };
 		8A494A082646B48F004BBF53 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A494A072646B48F004BBF53 /* OrderDetailsViewController.swift */; };
@@ -81,6 +86,11 @@
 		8A041AD926447573006444C9 /* PreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTableViewCell.swift; sourceTree = "<group>"; };
 		8A041ADE26447580006444C9 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		8A041AE3264483F2006444C9 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		8A2DF6A226473578001E5829 /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		8A2DF6C2264765C4001E5829 /* OrderNEWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNEWViewController.swift; sourceTree = "<group>"; };
+		8A2DF6C726476F6E001E5829 /* OrderStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusViewController.swift; sourceTree = "<group>"; };
+		8A2DF6CC26476F93001E5829 /* OrderStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusTableViewCell.swift; sourceTree = "<group>"; };
+		8A2DF6EC264782FD001E5829 /* LoginUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITest.swift; sourceTree = "<group>"; };
 		8A4949FD2646B05F004BBF53 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		8A494A022646B071004BBF53 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		8A494A072646B48F004BBF53 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +176,7 @@
 			children = (
 				045DF618263C67D40099052D /* IOS_Final_COBSCComp192p_053UITests.swift */,
 				045DF61A263C67D40099052D /* Info.plist */,
+				8A2DF6EC264782FD001E5829 /* LoginUITest.swift */,
 			);
 			path = "IOS_Final_COBSCComp192p-053UITests";
 			sourceTree = "<group>";
@@ -173,19 +184,12 @@
 		045DF626263C682E0099052D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8A2DF6AD26473979001E5829 /* Auth */,
+				8A2DF6AC2647396B001E5829 /* Account */,
+				8A2DF6AB2647395D001E5829 /* Order */,
+				8A2DF6AA26473946001E5829 /* Store */,
 				045DF5F5263C67C40099052D /* SceneDelegate.swift */,
 				045DF5F3263C67C40099052D /* AppDelegate.swift */,
-				045DF62A263C85E70099052D /* LoginViewController.swift */,
-				045DF62C263C86010099052D /* SignUpViewController.swift */,
-				8A041ACA2643D026006444C9 /* StoreViewController.swift */,
-				8A041ACF26447535006444C9 /* PreviewViewController.swift */,
-				8A041AD426447546006444C9 /* CategoryViewController.swift */,
-				8A041AD926447573006444C9 /* PreviewTableViewCell.swift */,
-				8A041ADE26447580006444C9 /* CategoryTableViewCell.swift */,
-				8A041AE3264483F2006444C9 /* AddFoodViewController.swift */,
-				8A4949FD2646B05F004BBF53 /* OrderViewController.swift */,
-				8A494A022646B071004BBF53 /* OrderTableViewCell.swift */,
-				8A494A072646B48F004BBF53 /* OrderDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +222,97 @@
 				77F80A5DD26F9A0F54318BCB /* Pods-IOS_Final_COBSCComp192p-053Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A2DF6AA26473946001E5829 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DF6B026473A3D001E5829 /* Menu */,
+				8A2DF6AF26473A0E001E5829 /* Preview */,
+				8A2DF6AE264739EE001E5829 /* Category */,
+				8A041ACA2643D026006444C9 /* StoreViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		8A2DF6AB2647395D001E5829 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DF6BE264756D7001E5829 /* OrderDetails */,
+				8A2DF6BD264756A8001E5829 /* OrderConfirmation */,
+				8A2DF6B426474AC6001E5829 /* OrderStatus */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		8A2DF6AC2647396B001E5829 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		8A2DF6AD26473979001E5829 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				045DF62A263C85E70099052D /* LoginViewController.swift */,
+				045DF62C263C86010099052D /* SignUpViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		8A2DF6AE264739EE001E5829 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8A041ADE26447580006444C9 /* CategoryTableViewCell.swift */,
+				8A041AD426447546006444C9 /* CategoryViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8A2DF6AF26473A0E001E5829 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				8A041ACF26447535006444C9 /* PreviewViewController.swift */,
+				8A041AD926447573006444C9 /* PreviewTableViewCell.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		8A2DF6B026473A3D001E5829 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8A041AE3264483F2006444C9 /* AddFoodViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8A2DF6B426474AC6001E5829 /* OrderStatus */ = {
+			isa = PBXGroup;
+			children = (
+				8A2DF6C726476F6E001E5829 /* OrderStatusViewController.swift */,
+				8A2DF6CC26476F93001E5829 /* OrderStatusTableViewCell.swift */,
+			);
+			path = OrderStatus;
+			sourceTree = "<group>";
+		};
+		8A2DF6BD264756A8001E5829 /* OrderConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				8A494A022646B071004BBF53 /* OrderTableViewCell.swift */,
+				8A4949FD2646B05F004BBF53 /* OrderViewController.swift */,
+				8A2DF6C2264765C4001E5829 /* OrderNEWViewController.swift */,
+			);
+			path = OrderConfirmation;
+			sourceTree = "<group>";
+		};
+		8A2DF6BE264756D7001E5829 /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8A494A072646B48F004BBF53 /* OrderDetailsViewController.swift */,
+				8A2DF6A226473578001E5829 /* OrderDetailTableViewCell.swift */,
+			);
+			path = OrderDetails;
 			sourceTree = "<group>";
 		};
 		A027D1C18FBA8C0D03D980D3 /* Frameworks */ = {
@@ -472,17 +567,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A2DF6CD26476F93001E5829 /* OrderStatusTableViewCell.swift in Sources */,
 				8A041ADA26447573006444C9 /* PreviewTableViewCell.swift in Sources */,
 				045DF62B263C85E70099052D /* LoginViewController.swift in Sources */,
 				045DF5F4263C67C40099052D /* AppDelegate.swift in Sources */,
 				8A041AD026447535006444C9 /* PreviewViewController.swift in Sources */,
 				8A494A082646B48F004BBF53 /* OrderDetailsViewController.swift in Sources */,
 				8A041ACB2643D026006444C9 /* StoreViewController.swift in Sources */,
+				8A2DF6C826476F6E001E5829 /* OrderStatusViewController.swift in Sources */,
 				8A041ADF26447580006444C9 /* CategoryTableViewCell.swift in Sources */,
 				8A041AD526447546006444C9 /* CategoryViewController.swift in Sources */,
 				045DF5F6263C67C40099052D /* SceneDelegate.swift in Sources */,
 				045DF5FE263C67C40099052D /* IOS_Final_COBSCComp192p_053.xcdatamodeld in Sources */,
 				8A041AE4264483F2006444C9 /* AddFoodViewController.swift in Sources */,
+				8A2DF6A326473578001E5829 /* OrderDetailTableViewCell.swift in Sources */,
+				8A2DF6C3264765C4001E5829 /* OrderNEWViewController.swift in Sources */,
 				045DF62D263C86010099052D /* SignUpViewController.swift in Sources */,
 				8A4949FE2646B05F004BBF53 /* OrderViewController.swift in Sources */,
 				8A494A032646B071004BBF53 /* OrderTableViewCell.swift in Sources */,
@@ -502,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				045DF619263C67D40099052D /* IOS_Final_COBSCComp192p_053UITests.swift in Sources */,
+				8A2DF6ED264782FD001E5829 /* LoginUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
