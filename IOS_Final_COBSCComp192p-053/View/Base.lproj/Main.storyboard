@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U0U-DT-Qds">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qFG-c5-kd5">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,7 +49,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="oxB-fy-QJ5"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -69,6 +69,7 @@
                                                 <state key="normal" title="Not a member? Register"/>
                                                 <connections>
                                                     <action selector="btnRegister:" destination="qFG-c5-kd5" eventType="touchUpInside" id="ixx-UV-Pd5"/>
+                                                    <segue destination="Sm0-h8-tPu" kind="presentation" modalPresentationStyle="fullScreen" id="iEe-L1-GbT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-48-Z5G">
@@ -189,8 +190,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Register"/>
                                                 <connections>
-                                                    <action selector="btnRegister:" destination="Sm0-h8-tPu" eventType="touchUpInside" id="xVR-ve-jfr"/>
-                                                    <action selector="btnSignUp:" destination="Sm0-h8-tPu" eventType="touchUpInside" id="Q5c-fF-RaK"/>
+                                                    <action selector="btnRegister:" destination="Sm0-h8-tPu" eventType="touchUpInside" id="h9b-fc-Hsl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgL-29-xcM">
@@ -198,6 +198,7 @@
                                                 <state key="normal" title="Already Registered?"/>
                                                 <connections>
                                                     <action selector="btnAlreadyRegister:" destination="Sm0-h8-tPu" eventType="touchUpInside" id="oyF-Kn-w4p"/>
+                                                    <segue destination="qFG-c5-kd5" kind="presentation" modalPresentationStyle="fullScreen" id="ei7-Kx-UCg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -231,6 +232,12 @@
                             <constraint firstItem="Tka-Lg-lqi" firstAttribute="top" secondItem="mIs-wK-3dh" secondAttribute="top" id="oyc-Wz-7PE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="AT8-kr-kGR" id="6Rf-QI-aoQ"/>
+                        <outlet property="txtEmail" destination="r2W-M7-MCP" id="0fj-ja-qfU"/>
+                        <outlet property="txtPassword" destination="tgH-Rm-bzM" id="rtw-5P-lku"/>
+                        <outlet property="txtPhone" destination="hB4-9p-gOU" id="fbA-mP-p05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eow-Iz-TTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7DG-rw-Vkt" userLabel="Exit" sceneMemberID="exit"/>
@@ -240,7 +247,7 @@
         <!--Store-->
         <scene sceneID="sI9-n2-7gT">
             <objects>
-                <viewController title="Store" id="IMf-GS-pum" customClass="StoreViewController" customModule="Café_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Store" title="Store" id="IMf-GS-pum" customClass="StoreViewController" customModule="Café_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dAl-BH-CgY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

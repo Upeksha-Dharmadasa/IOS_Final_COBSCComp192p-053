@@ -24,15 +24,18 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func btnRegister(_ sender: Any) {
+        SignUp();
     }
     @IBAction func btnAlreadyRegister(_ sender: Any) {
     }
     
     func emailValidate(_ txtEmail: String)-> Bool
     {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: txtEmail)
+//        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+//        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+//        return emailPred.evaluate(with: txtEmail)
+        
+        return true;
     }
                
     func passwordValidate(_ txtPassword: String) -> Bool
@@ -55,13 +58,13 @@ class SignUpViewController: UIViewController {
           }
           
          
-          if !emailValidate(txtEmail.text!)
-          {
-              let alert = UIAlertController(title: "Error", message: "Enter a valid Email", preferredStyle: .alert)
-              alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-              self.present(alert, animated: true, completion: nil)
-              return
-          }
+//          if !emailValidate(txtEmail.text!)
+//          {
+//              let alert = UIAlertController(title: "Error", message: "Enter a valid Email", preferredStyle: .alert)
+//              alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//              self.present(alert, animated: true, completion: nil)
+//              return
+//          }
           
           if txtPassword.text?.isEmpty == true
                 {
@@ -155,7 +158,7 @@ class SignUpViewController: UIViewController {
                 _ = newUser?.email
 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "Thankyou")
+                let vc = storyboard.instantiateViewController(identifier: "Home")
                 vc.modalPresentationStyle = .overFullScreen
                 self.present(vc, animated: true)
 

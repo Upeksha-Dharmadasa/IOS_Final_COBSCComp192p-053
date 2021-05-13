@@ -85,7 +85,7 @@ class OrderDetailsViewController: UIViewController, UITableViewDelegate, UITable
         }
     func calTime(latitude: Double, longitude: Double){
             if(latitude > 65.78 && longitude > 45.45){
-                TimeRemaining = "15 min"
+                TimeRemaining = "5 min"
             }
             else{
                 TimeRemaining = "3 min"

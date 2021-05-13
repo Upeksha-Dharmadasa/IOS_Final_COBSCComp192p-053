@@ -20,13 +20,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        print("Login btn Click")
+        print("Login btn Click");
+        Login();
     }
     
     
     @IBAction func btnRegister(_ sender: Any) {
     }
     @IBAction func btnForgetPassword(_ sender: Any) {
+        ForgetPassword();
     }
     
      func LoginValidate()-> Bool{
