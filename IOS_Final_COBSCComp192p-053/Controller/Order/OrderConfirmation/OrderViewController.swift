@@ -18,7 +18,33 @@ public struct NewOrder: Codable {
     }
 }
 
+
+public struct ConfirmedOrder: Codable {
+    let Oid : String?
+    let Cname : String?
+    let Ostatus : String?
+
+    enum CodingKeys: String, CodingKey {
+        case Oid
+        case Cname
+        case Ostatus
+    }
+}
+
+
 public struct ReadyOrder: Codable {
+    let Oid : String?
+    let Cname : String?
+    let Ostatus : String?
+
+    enum CodingKeys: String, CodingKey {
+        case Oid
+        case Cname
+        case Ostatus
+    }
+}
+
+public struct DispatchOrder: Codable {
     let Oid : String?
     let Cname : String?
     let Ostatus : String?
@@ -32,17 +58,36 @@ public struct ReadyOrder: Codable {
 
 import UIKit
 import Firebase
-class OrderViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class OrderViewController: UIViewController{
   
     
     @IBOutlet weak var ViewOrder: UITableView!
     var newOrders = [NewOrder]()
+    var confirmedyOrders = [ConfirmedOrder]()
     var readyOrders = [ReadyOrder]()
+    var dispatchOrders = [DispatchOrder]()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        ViewOrder.delegate = self;
-        ViewOrder.dataSource = self;
-        getOrderDetails();
+    }
+    @IBAction func OrderStatusClick(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+              case 0:
+                getOrderDetails();
+              
+              case 1:
+                getOrderDetails();
+                
+              case 2:
+                getOrderDetails();
+                
+              case 3:
+                getOrderDetails();
+             
+              default:
+                return;
+              }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -113,8 +158,13 @@ class OrderViewController: UIViewController,UITableViewDelegate, UITableViewData
             (snapshot) in
             if let data = snapshot.value {
                 if let Orders = data as? [String: Any]{
+                    
                     self.newOrders.removeAll();
+                    self.confirmedyOrders.removeAll();
                     self.readyOrders.removeAll();
+                    self.dispatchOrders.removeAll();
+
+                    
                     for item in Orders {
                         if let orderInfo = item.value as? [String: Any]{
                             print(orderInfo)

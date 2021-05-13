@@ -361,6 +361,9 @@
                                                     <state key="normal" title="Reject">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ClickReject:" destination="vFv-WO-F0u" eventType="touchUpInside" id="WZo-gm-M1E"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-bE-oOP">
                                                     <rect key="frame" x="265" y="180" width="100" height="30"/>
@@ -383,6 +386,9 @@
                                                     <state key="normal" title="Accept">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ClickAccept:" destination="vFv-WO-F0u" eventType="touchUpInside" id="9sT-aY-ObU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.86925898710000005" blue="0.18533010150000001" alpha="0.099337748340000004" colorSpace="custom" customColorSpace="displayP3"/>
@@ -399,6 +405,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="QRV-oa-7z2" secondAttribute="trailing" constant="10" id="y6b-Ya-eYM"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnAccept" destination="9u5-Ij-aIh" id="JXs-Fl-9vL"/>
+                                            <outlet property="btnReject" destination="QRV-oa-7z2" id="hWN-8b-o3z"/>
+                                            <outlet property="btnTrack" destination="60Q-bE-oOP" id="nZB-3k-eNM"/>
+                                            <outlet property="lblCustomerName" destination="YG9-N6-9Tk" id="zuh-89-rCf"/>
+                                            <outlet property="lblOrderID" destination="fZ3-iN-1Hq" id="ChC-t2-SQd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -410,6 +423,9 @@
                                     <segment title="Ready"/>
                                     <segment title="Dispatch"/>
                                 </segments>
+                                <connections>
+                                    <action selector="OrderStatusClick:" destination="xPt-8D-dN9" eventType="valueChanged" id="1S1-Db-138"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vmY-3l-XuH"/>
@@ -426,6 +442,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Order" id="w94-Ve-Fu2" userLabel="Order"/>
+                    <connections>
+                        <outlet property="ViewOrder" destination="aY8-En-AGc" id="wjo-pa-jhJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZK-P9-t4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

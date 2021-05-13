@@ -17,6 +17,7 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var btnAccept: UIButton!
     @IBOutlet weak var btnReject: UIButton!
     
+    @IBOutlet weak var btnTrack: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
